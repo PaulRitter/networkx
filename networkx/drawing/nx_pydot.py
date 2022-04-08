@@ -40,7 +40,7 @@ def write_dot(G, path):
     Path can be a string or a file handle.
     """
     P = to_pydot(G)
-    path.write(P.to_string())
+    path.write(P.to_string().replace("\"", "\\\""))
     return
 
 
